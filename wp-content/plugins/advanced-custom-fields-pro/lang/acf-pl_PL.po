@@ -782,7 +782,7 @@ msgstr "Dyskusja"
 
 #: includes/admin/views/field-group-options.php:112
 msgid "Comments"
-msgstr "idejaze"
+msgstr "Komentarze"
 
 #: includes/admin/views/field-group-options.php:113
 msgid "Revisions"
@@ -1146,7 +1146,7 @@ msgstr "Nowe formularze"
 #: includes/admin/views/settings-info.php:99
 msgid "Fields can now be mapped to comments, widgets and all user forms!"
 msgstr ""
-"Pola mogą być teraz do idejazy, widżetów i wszystkich formularzy "
+"Pola mogą być teraz do komentarzy, widżetów i wszystkich formularzy "
 "użytkowników!"
 
 #: includes/admin/views/settings-info.php:106
@@ -2767,7 +2767,7 @@ msgstr "Wszystkie formaty %s"
 
 #: includes/locations/class-acf-location-comment.php:27
 msgid "Comment"
-msgstr "idejaz"
+msgstr "Komentarz"
 
 #: includes/locations/class-acf-location-current-user-role.php:27
 msgid "Current User Role"

@@ -708,7 +708,7 @@ msgstr "Taksonomi Persyaratan"
 
 #: admin/views/field-group-locations.php:28
 msgid "Comment"
-msgstr "ideja"
+msgstr "Komentar"
 
 #: admin/views/field-group-locations.php:29
 msgid "Widget"
@@ -824,7 +824,7 @@ msgstr "Diskusi"
 
 #: admin/views/field-group-options.php:117
 msgid "Comments"
-msgstr "ideja"
+msgstr "Komentar"
 
 #: admin/views/field-group-options.php:118
 msgid "Revisions"
@@ -1027,7 +1027,7 @@ msgstr "Form Baru"
 
 #: admin/views/settings-info.php:105
 msgid "Fields can now be mapped to comments, widgets and all user forms!"
-msgstr "Bidang sekarang dapat dipetakan ke ideja, widget dan semua bentuk pengguna!"
+msgstr "Bidang sekarang dapat dipetakan ke komentar, widget dan semua bentuk pengguna!"
 
 #: admin/views/settings-info.php:112
 msgid "A new field for embedding content has been added"

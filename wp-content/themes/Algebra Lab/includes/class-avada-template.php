@@ -460,12 +460,13 @@ class Avada_Template {
 		<?php $add_below = ''; ?>
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 			<div class="the-comment">
-				<div class="avatar"><?php echo get_avatar( $comment, 54 ); ?></div>
+				<div class="avatar"><div class="ime-i-prezime"><i class="far fa-lightbulb"></i>
+</div></div>
 				<div class="comment-box">
 					<div class="comment-author meta">
-						<strong><?php echo get_comment_author_link(); ?></strong>
+
 						<?php /* translators: %1$s: Comment date. %2$s: Comment time. */ ?>
-						<?php printf( esc_attr__( '%1$s at %2$s', 'Avada' ), get_comment_date(), get_comment_time() ); // WPCS: XSS ok. ?><?php edit_comment_link( __( ' - Edit', 'Avada' ), '  ', '' ); // WPCS: XSS ok. ?>
+						<?php printf( esc_attr__( '%1$s at %2$s', 'Avada' ), get_comment_date(), get_comment_time() ); // WPCS: XSS ok. ?>
 						<?php
 						comment_reply_link(
 							array_merge(
@@ -486,6 +487,7 @@ class Avada_Template {
 							<br />
 						<?php endif; ?>
 						<?php comment_text(); ?>
+
 					</div>
 				</div>
 			</div>

@@ -211,10 +211,11 @@ if ( ! function_exists( 'fusion_render_post_metadata' ) ) {
 				ob_start();
 				comments_popup_link( esc_html__( '0 ideja', 'Avada' ), esc_html__( '1 ideja', 'Avada' ), esc_html__( '% ideje', 'Avada' ) );
 				$comments = ob_get_clean();
-				$metadata .= '<span class="fusion-comments"> | ' . $comments . '</span>';
-				$metadata .= '<span class="fusion-comments"> | Status: '. get_field('status').'</span>';
+				// $metadata .= '<span class="fusion-comments"> | ' . $comments . '</span>';
+				$metadata .= '<span class="fusion-comments">Status: '. get_field('status').'</span>';
 				$metadata .= '<span class="fusion-comments"> | Rok: ' . get_field('rok') . '</span>';
 				$metadata .= '<span class="fusion-comments"> | Rok za evaluaciju: ' . get_field('rok') . '</span>';
+			
 
 			}
 

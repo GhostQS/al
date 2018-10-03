@@ -14,6 +14,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php get_header(); ?>
 
+<?php
+//custom Stuff for single challenges
+/* Check if the job listing has closed (manually or automatically based on date).
+  If so, add text to end of the title and change the label status.*/
+
+$date_now = date('dmY');
+$rok = get_field('rok', false, false);
+$rok = new DateTime($rok);
+$rok = $rok->format('dmY');
+
+if($date_now >= $rok){
+	echo "nema više prijava zatvoreno";
+}
+else{
+	echo " otvoreno";
+}
+
+
+
+
+ ?>
+
 <section id="content" <?php Avada()->layout->add_style( 'content_style' ); ?>>
 	<?php $post_pagination = get_post_meta( $post->ID, 'pyre_post_pagination', true ); ?>
 	<?php if ( ( Avada()->settings->get( 'blog_pn_nav' ) && 'no' !== $post_pagination ) || ( ! Avada()->settings->get( 'blog_pn_nav' ) && 'yes' === $post_pagination ) ) : ?>
@@ -28,6 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
 			<?php $full_image = ''; ?>
 			<?php if ( 'above' === Avada()->settings->get( 'blog_post_title' ) ) : ?>
+
 				<?php if ( 'below_title' === Avada()->settings->get( 'blog_post_meta_position' ) ) : ?>
 					<div class="fusion-post-title-meta-wrap">
 				<?php endif; ?>
@@ -54,6 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							)
 						);
 						?>
+
 						<div class="fusion-flexslider flexslider fusion-flexslider-loading post-slideshow fusion-post-slideshow">
 							<ul class="slides">
 								<?php if ( $video ) : ?>
@@ -116,10 +140,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endif; ?>
 			<?php endif; ?>
 			<div class="post-content">
+
 				<?php the_content(); ?>
+					<div class="ch-btn"><span class="fusion-button fusion-button-default fusion-button-default-size"><a style="color:white" href="#respond" >Prihvati izazov!</a></span></div>
         <div class="opis">
           <h3>Kratak opis izazova</h3>
         <?php echo get_field('kratak_opis'); ?>
+					<div class="ch-btn"><span class="fusion-button fusion-button-default fusion-button-default-size"><a style="color:white" href="#respond" >Prihvati izazov!</a></span></div>
 
 				<?php fusion_link_pages(); ?>
 			</div>

@@ -7,3 +7,27 @@ Template: Algebra Lab
 Version: 1.0.0
 Text Domain:  algebra-lab
 */
+
+.ch-btn{
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.commentlist div.avatar{
+  padding:1rem;
+  background: #c40f61!important;
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.rw-ui-info-inner-container{
+  display: none!important;
+}

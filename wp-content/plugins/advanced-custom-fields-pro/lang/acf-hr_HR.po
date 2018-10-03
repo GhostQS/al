@@ -810,7 +810,7 @@ msgstr "Rasprava"
 
 #: includes/admin/views/field-group-options.php:120
 msgid "Comments"
-msgstr "idejai"
+msgstr "Komentari"
 
 #: includes/admin/views/field-group-options.php:121
 msgid "Revisions"
@@ -1156,7 +1156,7 @@ msgstr "Nove forme"
 #: includes/admin/views/settings-info.php:99
 msgid "Fields can now be mapped to comments, widgets and all user forms!"
 msgstr ""
-"Od sada je moguće dodati polja na sve stranice, uključujući idejae, "
+"Od sada je moguće dodati polja na sve stranice, uključujući komentare, "
 "stranice za uređivanje korisnika i widgete!"
 
 #: includes/admin/views/settings-info.php:106
@@ -2723,7 +2723,7 @@ msgstr "Svi oblici %s"
 
 #: includes/locations/class-acf-location-comment.php:27
 msgid "Comment"
-msgstr "ideja"
+msgstr "Komentar"
 
 #: includes/locations/class-acf-location-current-user-role.php:27
 msgid "Current User Role"

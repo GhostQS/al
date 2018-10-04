@@ -483,7 +483,7 @@ class Avada_Template {
 					</div>
 					<div class="comment-text">
 						<?php if ( '0' == $comment->comment_approved ) : ?>
-							<em><?php esc_attr_e( 'Your comment is awaiting moderation.', 'Avada' ); ?></em>
+							<em><?php esc_attr_e( 'Vaša ideja čeka odobrenje.', 'Avada' ); ?></em>
 							<br />
 						<?php endif; ?>
 						<?php comment_text(); ?>

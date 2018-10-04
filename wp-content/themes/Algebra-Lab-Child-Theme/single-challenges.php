@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <?php
-//custom Stuff for single challenges
-/* Check if the job listing has closed (manually or automatically based on date).
-  If so, add text to end of the title and change the label status.*/
+/*
+Hide ideas and change status if date is today
+*/
 
 $date_now = date('dmY');
 $rok = get_field('rok', false, false);
@@ -26,10 +26,19 @@ $rok = $rok->format('dmY');
 
 if($date_now >= $rok){
 	echo "nema više prijava zatvoreno";
+	echo "<style>#respond{display: none}</style>";
+	$field_name = "status";
+	$value = "zatvoren";
+	update_field( $field_name, $value, $post_id );
+
 }
 else{
 	echo " otvoreno";
+
 }
+
+
+
 
 
 
@@ -142,11 +151,11 @@ else{
 			<div class="post-content">
 
 				<?php the_content(); ?>
-					<div class="ch-btn"><span class="fusion-button fusion-button-default fusion-button-default-size"><a style="color:white" href="#respond" >Prihvati izazov!</a></span></div>
+					<div class="ch-btn"><span class="fusion-button fusion-button-default fusion-button-default-size"><a style="color:white" href="#respond" >PRIJAVI SVOJU IDEJU!</a></span></div>
         <div class="opis">
           <h3>Kratak opis izazova</h3>
         <?php echo get_field('kratak_opis'); ?>
-					<div class="ch-btn"><span class="fusion-button fusion-button-default fusion-button-default-size"><a style="color:white" href="#respond" >Prihvati izazov!</a></span></div>
+					<div class="ch-btn"><span class="fusion-button fusion-button-default fusion-button-default-size"><a style="color:white" href="#respond" >PRIJAVI SVOJU IDEJU!!</a></span></div>
 
 				<?php fusion_link_pages(); ?>
 			</div>

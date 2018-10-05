@@ -1444,7 +1444,7 @@ if ( fusion_is_element_enabled( 'fusion_blog' ) ) {
 
 						$inner_content .= '<div ' . FusionBuilder::attributes( $read_more_wrapper_class ) . '>';
 						$inner_content .= '<a class="fusion-read-more" href="' . get_permalink() . '"' . $link_target . '>';
-						$inner_content .= apply_filters( 'avada_read_more_name', esc_attr__( 'Read More', 'fusion-builder' ) );
+						$inner_content .= apply_filters( 'avada_read_more_name', esc_attr__( 'Pročitaj više', 'fusion-builder' ) );
 						$inner_content .= '</a>';
 						$inner_content .= '</div>';
 

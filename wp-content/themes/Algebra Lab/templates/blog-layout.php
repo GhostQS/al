@@ -330,7 +330,7 @@ if ( is_search() && Avada()->settings->get( 'search_results_per_page' ) ) {
 									?>
 									<div class="<?php echo esc_attr( $readmore_alignment ); ?>">
 										<a href="<?php echo esc_url_raw( get_permalink() ); ?>" class="fusion-read-more"<?php echo $link_target; // WPCS: XSS ok. ?>>
-											<?php echo esc_textarea( apply_filters( 'avada_blog_read_more_link', esc_attr__( 'Read More', 'Avada' ) ) ); ?>
+											<?php echo esc_textarea( apply_filters( 'avada_blog_read_more_link', esc_attr__( 'Pročitaj više', 'Avada' ) ) ); ?>
 										</a>
 									</div>
 								<?php endif; ?>
@@ -360,7 +360,7 @@ if ( is_search() && Avada()->settings->get( 'search_results_per_page' ) ) {
 								<?php $link_target = ( 'yes' === fusion_get_page_option( 'link_icon_target', $post->ID ) || 'yes' === fusion_get_page_option( 'post_links_target', $post->ID ) ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>
 								<div class="fusion-alignright">
 									<a href="<?php echo esc_url_raw( get_permalink() ); ?>" class="fusion-read-more"<?php echo $link_target; // WPCS: XSS ok. ?>>
-										<?php echo esc_textarea( apply_filters( 'avada_read_more_name', esc_attr__( 'Read More', 'Avada' ) ) ); ?>
+										<?php echo esc_textarea( apply_filters( 'avada_read_more_name', esc_attr__( 'Pročitaj više', 'Avada' ) ) ); ?>
 									</a>
 								</div>
 							<?php endif; ?>

@@ -2536,17 +2536,8 @@ It is a <strong>one time</strong> payment of a small fee. Just have a test.',
 	   public static function account_page_get_menu($only_standard=FALSE){
 			$available_tabs = array(
 									'overview'=> array('label' => __('Overview', 'ihc'), 'icon' => 'f015', 'icon_class' => ''),
-									'profile'=> array('label' => __('Profile', 'ihc'), 'icon' => 'f007', 'icon_class' => ''),
-									'subscription'=> array('label' => __('Subscriptions', 'ihc'), 'icon' => 'f0a1', 'icon_class' => ''),
-									'social' => array('label' => __('Social Plus', 'ihc'), 'icon' => 'f0e6', 'icon_class' => ''),
-									'orders' => array('label' => __('Orders', 'ihc'), 'icon' => 'f0d6', 'icon_class' => ''),
-									'transactions'=> array('label' => __('Transactions', 'ihc'), 'icon' => 'f155', 'icon_class' => ''),
-									'membeship_gifts' => array('label' => __('Membership Gifts', 'ihc'), 'icon' => 'f06b', 'icon_class' => '', 'check_magic_feat' => 'gifts'),
-									'membership_cards' => array('label' => __('Membership Cards', 'ihc'), 'icon' => 'f022', 'icon_class' => '', 'check_magic_feat' => 'pushover'),
-									'pushover_notifications' => array('label' => __('Pushover Notifications', 'ihc'), 'icon' => 'f0f3', 'icon_class' => '', 'check_magic_feat' => 'user_sites'),
-									'user_sites' => array('label' => __('User Sites', 'ihc'), 'icon' => 'f084', 'icon_class' => '', 'check_magic_feat' => TRUE),
-									'help' => array('label' => __('Help', 'ihc'), 'icon' => 'f059', 'icon_class' => ''),
-									'affiliate' => array('label' => __('Affiliate', 'ihc'), 'icon' => 'f0e8', 'icon_class' => ''),
+									'profile'=> array('label' => __('Moj Profil', 'ihc'), 'icon' => 'f007', 'icon_class' => ''),
+									
 									'logout' => array('label' => 'LogOut', 'icon' => 'f08b', 'icon_class' => ''),
 			);
 			foreach ($available_tabs as $slug=>$array_data){

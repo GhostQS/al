@@ -464,6 +464,10 @@ class Avada_Template {
 </div></div>
 				<div class="comment-box">
 					<div class="comment-author meta">
+						<strong><?php //current user admin show the ideas author
+						$current_user = wp_get_current_user();
+						if (user_can( $current_user, 'administrator' )) {
+							echo get_comment_author_link(); } ?></strong>
 
 						<?php /* translators: %1$s: Comment date. %2$s: Comment time. */ ?>
 						<?php printf( esc_attr__( '%1$s at %2$s', 'Avada' ), get_comment_date(), get_comment_time() ); // WPCS: XSS ok. ?>
@@ -486,7 +490,36 @@ class Avada_Template {
 							<em><?php esc_attr_e( 'Vaša ideja čeka odobrenje.', 'Avada' ); ?></em>
 							<br />
 						<?php endif; ?>
+						<?php if (user_can( $current_user, 'administrator' )) { ?>
+						<?php echo 	"<strong>Ime i prezime: </strong>" .  get_field('ime_i_prezime', $comment).'<br/>';
+						 echo "<strong>Kontakt broj: </strong>" . get_field('kontakt_mobitela', $comment).'<br/>';
+						?>
+						<?php 	echo "<strong> Datotekte: </strong><ul class='datoteke'>";
+
+		// check if the repeater field has rows of data
+		if( have_rows('ucitavanje_datoteka', $comment) ):
+
+		 	// loop through the rows of data
+		    while ( have_rows('ucitavanje_datoteka', $comment) ) : the_row();
+
+		        // display a sub field value
+		       $file = get_sub_field('ucitaj_dodatne_materijale', $comment);
+
+					 if( $file ):
+				?>
+					<li> <a href="<?php echo $file['url']; ?>" download><?php echo $file['filename']; ?></a></li>
+
+				 <?php endif;
+		    endwhile;
+				else :
+				endif;
+				?>
+
+</ul>
+<?php } ?>
+<strong>Opis ideje: </strong>
 						<?php comment_text(); ?>
+
 
 					</div>
 				</div>

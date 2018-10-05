@@ -66,7 +66,7 @@ $levels = get_option('ihc_levels');
 			<div class="row" style="margin-left:0px;">
 				<div class="col-xs-3">
 						<div class="iump-form-line">
-						<h2><?php _e('Member Since', 'ihc');?></h2>
+						<h2><?php _e('Član od', 'ihc');?></h2>
 								<label class="iump_label_shiwtch" style="margin:10px 0 10px -10px;">
 									<?php $checked = ($data['metas']['ihc_membership_member_since_enable']) ? 'checked' : '';?>
 									<input type="checkbox" class="iump-switch" onClick="iump_check_and_h(this, '#ihc_membership_member_since_enable');" <?php echo $checked;?> />

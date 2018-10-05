@@ -18,7 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 /*
 Hide ideas and change status if date is today
 */
-
 $date_now = date('dmY');
 $rok = get_field('rok', false, false);
 $rok = new DateTime($rok);
